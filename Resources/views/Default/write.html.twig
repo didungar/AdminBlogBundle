@@ -1,18 +1,42 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<h2>Rédaction d'un article :</h2>
+
 <form action="" method="post">
-id_categ <input type="integer" value="" />
-title <input type="text" value="" />
-slug <input type="text" value="" />
-descri <input type="text" value="" />
-Text :
-<textarea name="text" id="article_source" onchange="$('#article_demo').html($('#article_source').val());" onkeyup="$('#article_demo').html($('#article_source').val());"></textarea>
-id_user <input type="integer" value="" />
+<div class="panel panel-default">
+  <div class="panel-heading" id="title_demo"><h2>Rédaction d'un article :</h2></div>
+  <div class="panel-body" id="article_demo">
+	Catégorie :
+	<select name="id_categ">
+	{% for oCateg in lstCateg %}
+		<option value="{{oCateg.id}}">{{oCateg.name}}</option>
+	{% endfor %}
+	</select>
+	title <input id="title_source" name="title" type="text" value=""
+		onchange="$('#title_demo').html($('#title_source').val());" onkeyup="$('#article_demo').html($('#article_source').val());"
+		/>
+	descri <textarea name="descri"></textarea>
+	Text :
+	<textarea name="text" id="article_source"
+		onchange="$('#article_demo').html($('#article_source').val());" onkeyup="$('#article_demo').html($('#article_source').val());"
+		></textarea>
+	Autheur :
+	<select name="id_user">
+	{% for oAuthor in lstAuthor %}
+		<option value="{{oAuthor.id}}">{{oAuthor.name}}</option>
+	{% endfor %}
+	</select>
+	<input type="submit" class="btn btn-default" />
+  </div>
+</div>
 </form>
 <hr />
 <h2>Prévisualisation de l'article :</h2>
-<div id="article_demo"></div>
+<div class="panel panel-default">
+  <div class="panel-heading" id="title_demo">Panel heading without title</div>
+  <div class="panel-body" id="article_demo">
+    Panel content
+  </div>
+</div>
 {% endblock %}
 

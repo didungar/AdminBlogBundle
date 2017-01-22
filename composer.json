@@ -1,7 +1,7 @@
 {
     "name": "DidUngar/AdminBlogBundle",
     "type": "library",
-    "description": "Bundle for manage simply a DidUngarBlogBundle.",
+    "description": "Bundle for manage simply a DidUngarApiBlogBundle.",
     "authors": [
         {
             "name": "Didier Ungar",

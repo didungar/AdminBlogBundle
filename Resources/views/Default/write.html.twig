@@ -1,6 +1,18 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-Write
+<h2>Rédaction d'un article :</h2>
+<form action="" method="post">
+id_categ <input type="integer" value="" />
+title <input type="text" value="" />
+slug <input type="text" value="" />
+descri <input type="text" value="" />
+Text :
+<textarea name="text" id="article_source" onchange="$('#article_demo').html($('#article_source').val());" onkeyup="$('#article_demo').html($('#article_source').val());"></textarea>
+id_user <input type="integer" value="" />
+</form>
+<hr />
+<h2>Prévisualisation de l'article :</h2>
+<div id="article_demo"></div>
 {% endblock %}
 

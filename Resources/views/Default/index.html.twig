@@ -1,1 +1,7 @@
-Hello {{ name }}!
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<ul>
+	<li><a href="{{ path('didungaradminblog_write') }}">Ecrire</a></li>
+</ul>
+{% endblock %}

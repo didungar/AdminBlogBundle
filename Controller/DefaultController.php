@@ -27,7 +27,7 @@ class DefaultController extends Controller
 			$oApi->query('/blog/post/new.json', [
 				'id_categ' => $_POST['id_categ'],
 				'title' => $_POST['title'],
-				'slug' => $_POST['slug'],
+				//'slug' => $_POST['slug'],
 				'descri' => $_POST['descri'],
 				'text' => $_POST['text'],
 				'id_user' => $_POST['id_user'],
